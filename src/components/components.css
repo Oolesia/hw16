@@ -1,0 +1,17 @@
+.contacts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.card{
+    background-color: lightgoldenrodyellow;
+    margin: 15px;
+    padding: 5px 20px;
+    width: 170px;
+}
+.filter-inp{
+    margin-top: 20px;
+}
+.card img{
+    width: 50%;
+}
