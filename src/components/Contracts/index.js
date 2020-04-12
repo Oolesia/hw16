@@ -45,9 +45,10 @@ class Contracts extends Component {
             
 
     render(){
-        const regex = new RegExp(this.state.search, 'i')
         const data = this.state.contacts.filter((item) => {
-            return regex.test(item.firstName + ' ' + item.lastName) || regex.test(item.phone)
+            const searchValue = this.state.search.toLocaleLowerCase();
+            return item.lastName.toLowerCase().includes(searchValue) || item.firstName.toLowerCase().includes(searchValue) || 
+            item.phone.includes(searchValue)
         });
 
         return(
