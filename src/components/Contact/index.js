@@ -14,12 +14,8 @@ class Contact extends Component{
                     <div className='card' key={item+contact.firstName}>
                     <h5>{contact.firstName + ' ' + contact.lastName}</h5>
                     <p>{contact.gender}</p>
-                    {(() => {
-                        switch (contact.gender) {
-                        case "female":   return <img src={female} alt='female'/>;
-                        case "male":   return <img src={male} alt='male'/>;
-                        }
-                    })()}
+                    { contact.gender=== 'male' && <img src={male} alt='male'/> }
+                    { contact.gender=== 'female' && <img src={female} alt='female'/> }
                     <p>{contact.phone}</p>
                     </div>
                     ))
